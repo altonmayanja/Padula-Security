@@ -1,336 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Padula Security Solutions</title>
-    <link rel="logo" type="png" href="" />
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <nav class="links">
-      <div class="inner">
-        <div class="logo">
-          <!-- Logo goes below -->
-          <p>PADULA</p>
-        </div>
-        <div class="inner-links">
-          <!-- <div class="burger-menu">
-            
-            <div class="burger-items">
-              <span>About</span>
-              <span>Why Choose Us</span>
-              <span>Services</span>
-              <span>Testimonials</span>
-              <span>Contact</span>
-            </div>
-          </div> -->
-          <div>
-            <span><a href="#about">About</a></span>
-            <span><a href="#why">Why Choose</a></span>
-            <span><a href="#services">Services</a></span>
-            <span><a href="#products">Products</a></span>
-          </div>
-        </div>
-        <div class="button">
-          <button><a href="#contact" id="contact-btn">Contact</a></button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Padula Security Solutions</title>
+  <link rel="logo" type="png" href="" />
+  <script defer src="/scripts/observer.js"></script>
+  <link rel="stylesheet" href="main.css" />
+  <!-- Icons link to boxicons -->
+  <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <!-- remix icons import link-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="links">
+    <div class="inner">
+      <div class="logo">
+        <!-- Logo goes below -->
+        <p>PADULA</p>
       </div>
-    </nav>  
-    <section id="header">
-      <div class="header">
-        <div class="inner-text">
-          <h2><span>Trusted</span> <br>Security Solutions</h2>
+
+      <!-- mobile nav toggle (keeps desktop nav unchanged) -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <div class="inner-links">
+        <div>
+          <span><a href="#about">About</a></span>
+          <span><a href="#why">Why Choose</a></span>
+          <!-- Element from Uiverse.io by gharsh11032000 -->
+          <div class="menu">
+            <div class="item-nav">
+              <a href="#services" class="link">
+                <span> Our Services </span>
+                <svg viewBox="0 0 360 360" xml:space="preserve">
+                  <g id="SVGRepo_iconCarrier">
+                    <path id="XMLID_225_"
+                      d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z">
+                    </path>
+                  </g>
+                </svg>
+              </a>
+              <div class="submenu">
+                <div class="submenu-item">
+                  <a href="#" class="submenu-link"> CCTV Installation </a>
+                </div>
+                <div class="submenu-item">
+                  <a href="#" class="submenu-link"> Access Control Systems </a>
+                </div>
+                <div class="submenu-item">
+                  <a href="#" class="submenu-link"> Electric Fencing </a>
+                </div>
+                <div class="submenu-item">
+                  <a href="#" class="submenu-link"> ID Printing </a>
+                </div>
+                <div class="submenu-item">
+                  <a href="#" class="submenu-link"> Gate Automation </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </span>
+          <span><a href="#products">Products</a></span>
+        </div>
+        
+      </div>
+      <div class="contact-btn">
+          <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <section id="header" class="observe-section">
+    <div class="header header-blur">
+      <div class="inner-text appear-head">
+        <div class="main-heading">
+          <h2>Trusted <br>Security Solutions</h2>
+        </div>
+        <div class="hero-p">
           <p>
             Comprehensive security solutions tailored to protect your business,
             home, and assets with cutting-edge technology.
           </p>
-          <button id="contact-btn">Get In Touch</button>
         </div>
-        <div class="inner-img">
-          <img src="/assets/CDC.png" alt="">
-        </div>
-        
+
+        <button class="button2 hero-b">Get in Touch</button>
       </div>
-    </section>
-
-    <section id="about">
-      
-      <div class="about">
-        <div class="info">
-          <h3>About Us</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-            autem dolor hic atque dolores unde, beatae quaerat inventore
-            blanditiis culpa harum, nostrum perspiciatis quibusdam labore
-            facilis fuga minima incidunt.
-          </p>
-        </div>
-
-        <div class="pic">
-          <img src="/image.html/Axis.jpg" alt="A call picture to action." />
-        </div>
+      <div class="inner-img">
+        <img src="/assets/CDC.png" alt="">
       </div>
-    </section>
+    </div>
+    <!-- wave separator: edit fill to match the next section background -->
+    <div class="custom-shape-divider-bottom-1765202334">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
 
-    <section id="why">
-      <div class="why">
-        <h3>Why Choose Us</h3>
+  <section id="about" class="observe-section">
+    <div class="about">
+      <div class="info text-come">
+        <h3 class="appear">About Us</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-          autem dolor hic atque dolores unde, beatae quaerat.
+          autem dolor hic atque dolores unde, beatae quaerat inventore
+          blanditiis culpa harum, nostrum perspiciatis quibusdam labore
+          facilis fuga minima incidunt.
         </p>
-
-        <div class="point-wrapper">
-          <div class="div-1">container-1</div>
-          <div class="div-2">container-2</div>
-          <div class="div-3">container-3</div>
-          <div class="div-4">container-4</div>
-          <div class="div-5">container-5</div>
-        </div>
       </div>
-    </section>
-
-    <section id="clients">
-      <div class="clients">
-        <img src="/assets/bank of africa.png" alt="" />
-        <img src="/assets/British council.jpg" alt="" />
-        <img src="/assets/CDC.png" alt="" />
-        <img src="/assets/Centurion.png" alt="" />
-        <img src="/assets/daily monitor.png" alt="" />
-        <img src="/assets/DTB bank.jpg" alt="" />
-        <img src="/assets/embassy of japan.png" alt="" />
-        <img src="/assets/European union.png" alt="" />
-        <img src="/assets/jubilee.png" alt="" />
-        <img src="/assets/MultiChoice's.png" alt="" />
-        <img src="/assets/NTV.jpg" alt="" />
-        <img src="/assets/USA Embassy.png" alt="" />
-        <img src="/assets/DTB bank.jpg" alt="" />
-        <img src="/assets/UETCL.png" alt="" />
-        <img src="/assets/NTV.jpg" alt="" />
-        <img src="/assets/daily monitor.png" alt="" />
-        <img src="/assets/MultiChoice's.png" alt="" />
-        <img src="/assets/kampala serena hotel.png" alt="" />
+      <div class="pic">
+        <img src="/assets/control-room.png" alt="CCTV" class="pic-img vertical-scroll" />
       </div>
-    </section>
+    </div>
+    <div class="custom-shape-divider-bottom-1765203395">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill-2"></path>
+      </svg>
+    </div>
+  </section>
 
-    <section id="services">
-      <h3>Our Services</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum autem
-        dolor hic atque dolores unde, beatae quaerat.
-      </p>
+  <section id="why" class="observe-section">
 
-      <div class="services">
-        <div class="service-cards-wrapper">
-          <div class="card-1">
-            <div class="card-pic">
-              <img
-                src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg"
-                alt="CCTV camera"
-              />
-            </div>
-            <h4>Service 1</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-              autem dolor hic atque dolores unde, beatae quaerat.
-            </p>
+    <div class="info">
+      <h3 class="appear">Why Choose Us</h3>
+      <h4>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
+        autem dolor hic atque dolores unde, beatae quaerat.
+      </h4>
+    </div>
+    <div class="why">
+      <div class="content stagger-appear">
+        <div class="item-1">
+          <div class="logo">
+            <i class='bx  bx-clock'></i>
           </div>
-          <div class="card-2">
-            <div class="card-pic">
-              <img
-                src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg"
-                alt="CCTV camera"
-              />
-            </div>
-            <h4>Service 2</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-              autem dolor hic atque dolores unde, beatae quaerat.
-            </p>
-          </div>
-          <div class="card-3">
-            <div class="card-pic">
-              <img
-                src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg"
-                alt="CCTV camera"
-              />
-            </div>
-            <h4>Service 3</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-              autem dolor hic atque dolores unde, beatae quaerat.
-            </p>
-          </div>
-          <div class="card-4">
-            <div class="card-pic">
-              <img
-                src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg"
-                alt="CCTV camera"
-              />
-            </div>
-            <h4>Service 4</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-              autem dolor hic atque dolores unde, beatae quaerat.
-            </p>
-          </div>
-          <div class="card-5">
-            <div class="card-pic">
-              <img
-                src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg"
-                alt="CCTV camera"
-              />
-            </div>
-            <h4>Service 5</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-              autem dolor hic atque dolores unde, beatae quaerat.
-            </p>
-          </div>
-          <div class="card-6">
-            <div class="card-pic">
-              <img
-                src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg"
-                alt="CCTV camera"
-              />
-            </div>
-            <h4>Service 6</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-              autem dolor hic atque dolores unde, beatae quaerat.
-            </p>
-          </div>
-          <div class="card-7">
-            <div class="card-pic">
-              <img
-                src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg"
-                alt="CCTV camera"
-              />
-            </div>
-            <h4>Service 7</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
-              autem dolor hic atque dolores unde, beatae quaerat.
-            </p>
-          </div>
+          <h4>24/7 Avalaibity</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
+            autem dolor hic atque dolores unde, beatae quaerat.
+          </p>
         </div>
-        <button id="contact-btn"></button>
-      </section>
-
-      <section id="products">
-        <div class="products">
-          <h3>Our Premium Products We Use</h3>
-          <!-- Prduct Carousel Start -->
-          <div class="products-carousel">
-            <div class="inner-products-carousel">
-              <div class="product-1">
-                <span><img src="/assets/bosch.jpg" alt="" /> </span>
-                <span
-                  ><p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    rerum autem dolor hic atque dolores unde, beatae quaerat
-                    inventore blanditiis culpa harum, nostrum perspiciatis
-                    quibusdam labore facilis fuga minima incidunt.
-                  </p></span
-                >
-              </div>
-              <div class="product-1">
-                <span><img src="/assets/bosch.jpg" alt="" /> </span>
-                <span
-                  ><p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    rerum autem dolor hic atque dolores unde, beatae quaerat
-                    inventore blanditiis culpa harum, nostrum perspiciatis
-                    quibusdam labore facilis fuga minima incidunt.
-                  </p></span
-                >
-              </div>
-              <div class="product-1">
-                <span><img src="/assets/bosch.jpg" alt="" /> </span>
-                <span
-                  ><p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    rerum autem dolor hic atque dolores unde, beatae quaerat
-                    inventore blanditiis culpa harum, nostrum perspiciatis
-                    quibusdam labore facilis fuga minima incidunt.
-                  </p></span
-                >
-              </div>
-              <div class="product-1">
-                <span><img src="/assets/bosch.jpg" alt="" /> </span>
-                <span
-                  ><p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    rerum autem dolor hic atque dolores unde, beatae quaerat
-                    inventore blanditiis culpa harum, nostrum perspiciatis
-                    quibusdam labore facilis fuga minima incidunt.
-                  </p></span
-                >
-              </div>
-            </div>
+        <div class="item-2">
+          <div class="logo">
+            <i class='bx bxs-thumb-up'></i>
           </div>
-        </div>
-        <!-- Prduct Carousel End -->
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="contact">
-        <h3>Contact Us Now</h3>
-
-        <div class="form-wrapper">
-          <form action="submit">
-            <h4>Write a Message</h4>
-
-            <label for="name">Full Name</label>
-            <input class="name" type="text" />
-
-            <label for="email">Email</label>
-            <input class="email" type="text" />
-
-            <label for="contact">Phone Number</label>
-            <input class="contact" type="number" />
-
-            <label for="Message">Type Your Message</label>
-            <input class="Message" type="text" />
-
-            <input type="submit" />
-          </form>
-        </div>
-
-        <div class="more-contacts">
-          <h3>CALL OR EMAIL ME</h3>
-
-          <div class="inner">
-            <p>+256 774 684 983</p>
-            <p>support@padula.co.za</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="footer">
-      <div class="footer">
-        <div class="logo">
-          <img src="/assets/padula logo343.jpg" alt="Padula logo" />
-          <p>Padula</p>
-        </div>
-
-        <div class="footer-info">
+          <h4>Skilled Technicians</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
             autem dolor hic atque dolores unde, beatae quaerat.
           </p>
         </div>
 
-        <div class="socials">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+        <div class="item-3">
+          <i class='bx bxs-crown'></i>
+          <h4>High Quality Equipment</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
+            autem dolor hic atque dolores unde, beatae quaerat.
+          </p>
+        </div>
+        <div class="item-3">
+          <i class='bx bxs-cog'></i>
+          <h4>Reliable Security Systems</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
+            autem dolor hic atque dolores unde, beatae quaerat.
+          </p>
+        </div>
+        <div class="item-3">
+          <i class='bx bxs-spanner'></i>
+          <h4>On-going Support and Maintenance</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
+            autem dolor hic atque dolores unde, beatae quaerat.
+          </p>
+        </div>
+        <div class="item-3">
+          <i class='bx bxs-briefcase'></i>
+          <h4>Professional Installation Work</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
+            autem dolor hic atque dolores unde, beatae quaerat.
+          </p>
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+  <!-- clients wrapper: make visible when scrolled into view -->
+  <div class="clients observe-section">
+    <h3>Our Clients</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum
+      autem dolor hic atque dolores unde, beatae quaerat.
+    </p>
+    <div class="carousel">
+      <div class="group">
+        <img src="/assets/centurion.png" alt="">
+        <img src="/assets/daily monitor.png" alt="">
+        <img src="/assets/CDC.png" alt="">
+        <img src="/assets/embassy of japan.png" alt="">
+        <img src="/assets/European union.png" alt="">
+        <img src="/assets/Jesa.jpg" alt="">
+        <img src="/assets/ntv.png" alt="">
+        <img src="/assets/stanbic.png" alt="">
+        <img src="/assets/jubilee.png" alt="">
+        <img src="/assets/standard chartered.png" alt="">
+        <!-- duplicate items to make the animations seeemlessly -->
+        <img src="/assets/centurion.png" alt="">
+        <img src="/assets/daily monitor.png" alt="">
+        <img src="/assets/CDC.png" alt="">
+        <img src="/assets/embassy of japan.png" alt="">
+        <img src="/assets/European union.png" alt="">
+        <img src="/assets/jubilee.png" alt="">
+        <img src="/assets/ntv.png" alt="">
+        <img src="/assets/stanbic.png" alt="">
+        <img src="/assets/jubilee.png" alt="">
+        <img src="/assets/standard chartered.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <section id="services" class="observe-section">
+    <h3 class="appear">Our Services</h3>
+    <p style="text-align: center;">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum autem
+      dolor hic atque dolores unde, beatae quaerat.
+    </p>
+    <div class="services">
+      <!-- add observe-group for the service cards -->
+      <div class="service-cards-wrapper observe-group">
+        <div class="ser-1">
+          <img src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg" alt="camera-service">
+          <span>
+            <h4>CCTV Installation</h4>
+            <ul>
+              <li> We design and install camera systems that give clear coverage day and night.</li>
+              <li>Every camera is positioned with purpose to eliminate blind spots.</li>
+              <li>You get secure storage, remote viewing, and a setup built for long-term reliability. </li>
+            </ul>
+          </span>
+        </div>
+        <div class="ser-2">
+          <img src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg" alt="camera-service">
+          <span>
+            <h4>Electric Fencing</h4>
+            <ul>
+              <li>We install strong perimeter fencing that acts as both a barrier and an early-warning system.</li>
+              <li>The wiring, grounding, and energizers are set up safely and professionally.</li>
+              <li>Your property gets a secure boundary that works around the clock.</li>
+            </ul>
+          </span>
+        </div>
+        <div class="ser-3">
+          <img src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg" alt="camera-service">
+          <span>
+            <h4>Access Control Systems</h4>
+            <ul>
+              <li> We set up electronic access systems that control who can enter your building.</li>
+              <li>Using keycards, biometric scanners, or PIN codes, we create a secure entry process.</li>
+              <li>This ensures only authorized personnel can access sensitive areas.</li>
+            </ul>
+          </span>
+        </div>
+        <div class="ser-4">
+          <img src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg" alt="camera-service">
+          <span>
+            <h4>Gate Automation</h4>
+            <ul>
+              <li>
+                We install automated gate systems that provide secure and convenient access to your property.
+              </li>
+              <li>
+                Our solutions include remote controls, keypads, and intercoms for easy operation.
+              </li>
+              <li>
+                Your gates will open and close smoothly while enhancing your property's security.
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="ser-5">
+          <img src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg" alt="camera-service">
+          <span>
+            <h4>ID Printing</h4>
+            <ul>
+              <li>
+                We provide professional ID card printing services for businesses and organizations.
+              </li>
+
+              <li>
+                Our high-quality cards can include photos, logos, and security features.
+              </li>
+              <li>
+                This helps enhance security and identification within your organization.
+            </ul>
+          </span>
+        </div>
+        <div class="ser-6">
+          <img src="/assets/4K-CCTV-Cameras-Is-Ultra-High-Definition-Worth-It.jpg" alt="camera-service">
+          <span>
+            <h4>Maintenance & Support</h4>
+            <ul>
+              <li> We offer ongoing maintenance and support services to ensure your security systems operate optimally.
+              </li>
+              <li>Our team provides regular inspections, updates, and repairs as needed.</li>
+              <li>This ensures your security infrastructure remains reliable and effective over time.</li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="products" class="observe-section">
+    <div class="products">
+      <h3>Our Premium Products We Use</h3>
+      <!-- Product cards wrapper: add observe-group -->
+      <div class="point-wrapper observe-group">
+        <!-- From Uiverse.io by SachinKumar666 -->
+        <div class="card">
+          <div class="card__shine"></div>
+          <div class="card__glow"></div>
+          <div class="card__content">
+            <div class="card__badge">NEW</div>
+            <div style="--bg-color: #a78bfa" class="card__image"></div>
+            <div class="card__text">
+              <p class="card__title">Centurion Gate Motors</p>
+              <p class="card__description">
+                High-quality motors for automatic gates — sliding or swing, residential or heavier gates, some models
+                with app/remote control and backup battery for power outages.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__shine"></div>
+          <div class="card__glow"></div>
+          <div class="card__content">
+            <div class="card__badge">NEW</div>
+            <div style="--bg-color: #a78bfa" class="card__image"></div>
+            <div class="card__text">
+              <p class="card__title">Surveillance-grade CCTV Cameras</p>
+              <p class="card__description">
+                For installing comprehensive CCTV systems (homes, offices, businesses), offering clear daily/night
+                coverage, remote monitoring, recording. Suppliers in Kampala currently offer such cameras
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__shine"></div>
+          <div class="card__glow"></div>
+          <div class="card__content">
+            <div class="card__badge">NEW</div>
+            <div style="--bg-color: #a78bfa" class="card__image"></div>
+            <div class="card__text">
+              <p class="card__title">Electric-fence kits & razor wire + energizers</p>
+              <p class="card__description">
+                For perimeter security — electric fencing plus accessories to fence a property boundary (posts, wiring,
+                insulators, jagged razor-wire etc.) to deter intruders.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__shine"></div>
+          <div class="card__glow"></div>
+          <div class="card__content">
+            <div class="card__badge">NEW</div>
+            <div style="--bg-color: #a78bfa" class="card__image"></div>
+            <div class="card__text">
+              <p class="card__title">Access-control hardware</p>
+              <p class="card__description">
+                Biometric scanners, keycard readers, electric locks etc. for controlling access to buildings/rooms.
+                Suitable for offices, commercial buildings, warehouses needing secure entry systems.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__shine"></div>
+          <div class="card__glow"></div>
+          <div class="card__content">
+            <div class="card__badge">NEW</div>
+            <div style="--bg-color: #a78bfa" class="card__image"></div>
+            <div class="card__text">
+              <p class="card__title">Gate Automated Accessories</p>
+              <p class="card__description">To manage who enters/exits a building — useful for offices, gated
+                communities, businesses needing controlled access.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__shine"></div>
+          <div class="card__glow"></div>
+          <div class="card__content">
+            <div class="card__badge">NEW</div>
+            <div style="--bg-color: #a78bfa" class="card__image"></div>
+            <div class="card__text">
+              <p class="card__title">Complete Security System Package</p>
+              <p class="card__description">
+                All-in-one security solution including CCTV, access control, electric fencing, gate automation — ideal
+                for homes, offices, businesses wanting comprehensive security.
+              </p>
+            </div>
+            <div class="card__footer">
+              <a href="#contact">
+                <div class="card__button">Get In Touch</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="contact" class="observe-section">
+    <div class="contact">
+      <h3>Contact Us Now</h3>
+
+      <!-- contact form -->
+    </div>
+    <div class="contact-form">
+      <div class="contact-form-container">
+        <form class="form">
+
+          <div class="flex">
+            <label>
+              <input required="" placeholder="" type="text" class="input">
+              <span>first name</span>
+            </label>
+            <label>
+              <input required="" placeholder="" type="text" class="input">
+              <span>last name</span>
+            </label>
+          </div>
+          <label>
+            <input required="" placeholder="" type="email" class="input">
+            <span>email</span>
+          </label>
+          <label>
+            <input required="" type="tel" placeholder="" class="input">
+            <span>contact number</span>
+          </label>
+          <label>
+            <textarea required="" rows="5" placeholder="" class="input01"></textarea>
+            <span>message</span>
+          </label>
+          <button class="fancy" href="#">
+            <span class="top-key"></span>
+            <span class="text">submit</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact info card: simple explanations about security companies -->
+      <aside class="contact-card card">
+        <div class="card__content">
+          <div class="card__text">
+            <p class="card__title">About Security Companies</p>
+            <p class="card__description">
+              Professional security companies design, install and maintain systems that protect people, buildings and assets.
+              Common services include CCTV, access control, perimeter alarms, gate automation and ID solutions.
+            </p>
+            <ul>
+              <li>Licensed technicians and 24/7 response for emergencies.</li>
+              <li>Customized installations with remote monitoring and secure storage.</li>
+              <li>Ongoing maintenance, updates and system health checks to ensure reliability.</li>
+            </ul>
+            <p class="muted">Questions? <br>
+              Submit the form or call us for a free consultation.</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="more-contacts">
+        <h3>CALL OR EMAIL US</h3>
+        <div class="inner">
+          <p>+256 774 684 983</p>
+          <p>support@padula.co.za</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="main-footer-cont">
+    <div class="footer">
+      <div class="logo">
+        <img src="/assets/padula logo343.jpg" alt="Padula logo" />
+        <p>Padula</p>
+      </div>
+      <div class="footer-info">
+        <p style="color: #fff;">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>At rerum
+          autem dolor hic atque dolores unde, beatae quaerat.
+        </p>
+      </div>
+      <div class="socials">
+        <i class="ri-linkedin-box-fill"></i>
+        <i class="ri-facebook-fill"></i>
+        <i class="ri-twitter-fill"></i>
+        <i class="ri-instagram-fill"></i>
+        <i class="ri-whatsapp-fill"></i>
+      </div>
+    </div>
+  </div>
+  <!-- other page content -->
+  <script src="scripts/observer.js" defer></script>
+</body>
+
 </html>
+`
