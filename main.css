@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Definition formatting on all elements */
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    
+}
+
+/* Remove of default styles applied to each elements */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    border: 0;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+/* Global Color Variables */
+:root{
+    --bg-color: #111222a2;
+    --txt-color: #282828;
+    --buttons: #ffef42d7;
+    --secondary-colors: #ffef42;
+    /* increase if your nav is taller -- adjust as needed */
+    --header-height: 9rem;
+}
+
+body{
+    padding-top: var(--header-height);
+    background: transparent;
+    color: var(--txt-color);
+    
+}
+
+/* navigation bar start */
+nav{
+    
+}
+
+nav .inner{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 8% 2rem;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    
+}
+
+nav .inner-links a{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 0 2rem  ;
+    color: var(--txt-color);
+    border-bottom: 5px solid transparent;
+    transition: all 0.3s ease-in;
+    
+}
+
+nav .inner-links a:hover{
+    border-bottom: 3px solid var(--secondary-colors);
+    color: var(--txt-color);
+}
+/* Navigation bar End */
+
+/* sections universal formatting */
+section{
+    /* ensure sections start below fixed nav and don't overlap */
+    min-height: calc(100vh - var(--header-height));
+    padding: 10% 4rem 8% 12rem;
+}
+
+h3{
+    font-size: 24px;
+}
+
+/* Header styles start */
+#header{
+
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .inner-text{
+    width: 50%;
+
+}
+
+.header h2{
+    font-size: 38px;
+}
+
+.header p{
+    font-size: 16px;
+}
+
+/* header section styles end */
+
+
+/* about section styles start */
+.about{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse wrap;
+
+}
+
+.about .info{
+    width: 50%;
+}
+/* about section styles end */
+
+/* why section styles start */
+.why{
+    
+}
+/* why section styles end */
