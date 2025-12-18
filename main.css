@@ -39,19 +39,10 @@ html{
 
 /* Global Color Variables */
 :root{
-    --bg-color: #111222a2;
-    --txt-color: #282828;
-    --buttons: #ffef42d7;
-    --secondary-colors: #ffef42;
-    /* header height is mobile-first; larger values set in media queries */
-    --header-height: 6rem;
-}
-
-:root{
   /* Design System - color tokens */
   --color-primary: #0D1B2A;      /* primary */
   --color-secondary: #1C1F26;    /* secondary */
-  --color-accent: #2F5D8C;       /* accent */
+  --color-accent: #2f5e8c;     /* accent */
   --neutral-light: #D1D5DB;      /* light neutral */
   --neutral-base: #FFFFFF;       /* base neutral */
 
@@ -404,8 +395,6 @@ img, svg { max-width: 100%; height: auto; }
 
 /* ensure no element can cause horizontal overflow */
 html, body { overflow-x: hidden; }
-
-/* small utility to clamp large paddings used elsewhere to avoid overflow on tiny viewports */
 section { padding-left: clamp(0.75rem, 4vw, 3rem); padding-right: clamp(0.75rem, 4vw, 3rem); }
 
 /* Navigation bar End */
@@ -424,7 +413,7 @@ h2{
 
 h3{
     font-size: 24px;
-    color: var(--color-primary);
+    z-index: 9999;
 }
 
 h4{
@@ -454,23 +443,25 @@ p{
 }
 
 .header .main-heading{
-  animation: appear-1 .6s ease-in-out;
+  color: var(--neutral-light);
+  animation: appear-1 .8s ease-in-out;
   
 }
-.header .hero-p{
-  animation: appear-2 0.9s ease-in-out;
+.header .hero-p p{
+  color: var(--neutral-light);
+  animation: appear-2 1s ease-in-out;
   
 }
 
 .header .hero-b{
-  animation: appear-3 1s ease-in-out;
+  animation: appear-3 1.2s ease-in-out;
   
 }
 
 @keyframes appear-1 {
   0%{
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-150px);
   } 
   
   100%{
@@ -482,7 +473,7 @@ p{
 @keyframes appear-2 {
   0%{
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateX(-60px);
   } 
   
   100%{
@@ -494,7 +485,7 @@ p{
 @keyframes appear-3 {
   0%{
     opacity: 0;
-    transform: translateX(-60px);
+    transform: translateX(-90px);
   } 
   
   100%{
@@ -505,12 +496,15 @@ p{
 
 
 
-.header .inner-img{
-    width: 35%;
-}
-
-.header .inner-img img{
-    width: 100%;
+.blob{
+  max-width: 500px;
+  
+} 
+        
+.blob-img{
+  width: 100%;
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  
 }
 
 .header span{
@@ -531,6 +525,7 @@ p{
 
 /* From Uiverse.io by shah1345 */ 
 .button2 {
+  
   display: inline-block;
   transition: all 0.2s ease-in;
   position: relative;
@@ -544,7 +539,7 @@ p{
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px var(--neutral-light), -6px -6px 12px #ffffff;
   background: var(--neutral-base);
   color: var(--color-primary);
   border-color: var(--neutral-base);
@@ -562,7 +557,7 @@ p{
   top: 100%;
   width: 140%;
   height: 180%;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.295);
   border-radius: 50%;
   display: block;
   transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -577,7 +572,7 @@ p{
   top: 180%;
   width: 160%;
   height: 190%;
-  background-color: var(--color-accent) ;
+  background-color: var(--color-primary) ;
   border-radius: 50%;
   display: block;
   transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -587,85 +582,32 @@ p{
 .button2:hover {
   color: #ffffff;
   border: 1px solid var(--color-accent);
-  background: var(--color-accent);
+  background: var(--color-primary);
   color: var(--neutral-base);
 }
 
 .button2:hover:before {
   top: -35%;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 .button2:hover:after {
   top: -45%;
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 
 /* Universal button styles end */
-
-/* header section background + wavy bottom */
 #header{
-  position: relative;
-    overflow: visible;           
-    background: url();          
-    padding-bottom: 0;           
-}
-
-.custom-shape-divider-bottom-1765202334 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1765202334 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 118px;
-}
-
-.custom-shape-divider-bottom-1765202334 .shape-fill {
-    fill: transparent;
+    background-color: var(--color-primary);
+    
 }
 /* header section styles end */
 
 
 /* about section styles start */
-
-.custom-shape-divider-bottom-1765203395 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-bottom-1765203395 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 150px;
-}
-
-.custom-shape-divider-bottom-1765203395  
-.shape-fill-2 {
-  fill: #f5f5f5;
-}
-
-.vertical-scroll{
-  animation: scroll-In both;
-  animation-timeline: view();
-  animation-range: entry 5% exit 10%;
-}
-
 @keyframes scroll-In {
   0% {
     transform: translateX(-100px);
@@ -676,6 +618,8 @@ p{
   100% {
     transform: translateX(0);
     opacity: 1;
+    scale: 1;
+    filter: saturate(1) contrast(1) brightness(1) blur(0px);
   }
   
 }
@@ -720,27 +664,51 @@ p{
   }
 }
 
-#about,
-.about {
+#about, .about{
+
   position: relative;
-  padding-bottom: 121px;
+  overflow-x: hidden;  
+  padding-bottom: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 0; 
+
+  
+
+}
+
+.wave-1{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.wave-2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: ;
+  
 }
 
 .about{
     display: flex;
     justify-content: space-between;
     flex-flow: row-reverse wrap;
+    
 }
 
 .about .info{
     width: 60%;
 }
 
-.about .info h3{
+.info h3{
     margin-bottom: 2rem;
+  color: var(--neutral-base);
 }
 
 .about .info p{
@@ -757,20 +725,16 @@ p{
   width: fit-content;
 }
 
-.pic .pic-img {
-  width: 320px; 
-  height: 500px;     
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: 12px; /* slight rounding; remove if you want perfectly square corners */
+.pic-img  {
+  width: 320px;     
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   box-shadow: 0 12px 30px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.pic .pic-img:hover {
+.pic-img:hover img{
   transform: translateY(-6px);
+  cursor: pointer;
   box-shadow: 0 20px 40px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.08);
 }
 
@@ -778,10 +742,16 @@ p{
 
 /* why choose us section start  */
 #why{
-  background-color: #f5f5f5;
+  /* background: url(assets/circle-2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100%; */
+  background-color: var(--color-primary);
+  position: relative;
 }
 #why .info{
     text-align: center;
+    color: #f5f5f5;
     
 }
 
@@ -806,8 +776,11 @@ i:hover{
 
 #why h4{
     padding-bottom: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
+    color: var(--color-secondary);
 }
+
+
 
 
 .stagger-appear:nth-child(1){
@@ -965,6 +938,10 @@ i:hover{
 /* services section end */
 
 /* Products section styles start */
+#products{
+  background-color: var(--color-primary);
+}
+
 .products{
     text-align: center;
 }
@@ -988,7 +965,7 @@ i:hover{
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: var(--card-shadow);
     border: 1px solid rgba(255, 255, 255, 0.356);
     background: var(--card-bg);
@@ -1123,8 +1100,8 @@ i:hover{
   
   
   /*Card Hover Effects */
-  .card:hover {
-    transform: translateY(-10px);
+  .products:hover .card {
+    transform: translateY(-20px);
     box-shadow:
       0 20px 25px -5px rgba(0, 0, 0, 0.1),
       0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -1197,6 +1174,11 @@ i:hover{
 /* Products section styles end */
 
 
+/* Contact section styles start */
+#contact{
+  background: var();
+}
+/* Contact section styles start */
 
 /* Contact Form Styles start */
 .contact-form{
@@ -1210,7 +1192,6 @@ i:hover{
 .more-contacts{
   display: flex;
   flex-direction: column;
-  gap: 20px;
   font-size: 16px;
   max-width: 350px;
   background-color: #fff;
@@ -1429,9 +1410,19 @@ li{
     color: var(--txt-color);  
 }
 
-aside{
-  padding: 60px;
+aside{  
+  padding: 12rem;
 
+}
+
+aside .muted{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.sub-section-contact{
+  width: 30%;
 }
 
 /* Contact Form Styles End */
@@ -1494,6 +1485,22 @@ aside{
     cursor: pointer;
     transition: color 0.3s ease;
 }
+
+
+/* footer copyright info start */
+.site-copy{
+  text-align:center;
+  padding:12px 0;
+  background:transparent;
+  color:var(--neutral-base);
+  
+  p{
+    font-size:14px;
+    margin:0;
+    color:var(--color-secondary);
+  }
+}
+/* footer copyright info start */
 
 /* Footer Styles End */
 

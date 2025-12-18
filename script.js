@@ -39,3 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   groups.forEach(g => groupObserver.observe(g));
 });
+
+    // set dynamic copyright year
+    (function(){
+      const el = document.getElementById('copy-year');
+      if(el) el.textContent = new Date().getFullYear();
+    })();
