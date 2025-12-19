@@ -216,10 +216,17 @@ body{
 /* services menu styling end */
 
 .contact-btn{
-  flex: 0 0 auto;
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  background-color: var(--color-primary);
+  padding: 0.6em 1.5em;
+    font-size: 1.5em;
+    background: var(--color-primary);
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(0.95);
 }
 
 .contact-btn a{
@@ -229,11 +236,12 @@ body{
 
 .contact-btn a:hover{
   color: var(--color-accent);
-}
+} 
 
 .contact-btn:hover{
   border: 2px solid var(--color-accent);
   background-color: transparent;
+  
 }
 
 nav .inner{
@@ -421,6 +429,7 @@ h2{
 h3{
     font-size: 24px;
     z-index: 9999;
+    font-family: "Bungee", sans-serif;
 }
 
 h4{
@@ -943,7 +952,7 @@ i:hover{
   transform: translateY(-20px);
   box-shadow: 0px 0px 0px ;   
   cursor: pointer;
-  box-shadow: 5px 5px 15px var(--color-accent);          
+  box-shadow: 5px 5px 15px var(--color-primary), -5px -5px 15px #ffffff;          
 
 }
 
@@ -956,6 +965,8 @@ i:hover{
 
 .products{
     text-align: center;
+    color: var(--neutral-base);
+    font-family: "Bungee", sans-serif;
 }
 .point-wrapper {
     display: grid;
@@ -977,26 +988,13 @@ i:hover{
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: var(--card-shadow);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--neutral-base);
     border: 1px solid rgba(255, 255, 255, 0.356);
     background: var(--card-bg);
     color: var(--card-text);
     --card-accent: var(--card-accent);
   
-  }
-  .card__button {
-    padding: 1em 1.5em;
-    font-size: 1.2em;
-    background: var(--color-primary);
-    border-radius: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    transform: scale(0.9);
   }
   
   .card__shine {
@@ -1004,9 +1002,9 @@ i:hover{
     inset: 0;
     background: linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0) 40%,
-      rgba(255, 255, 255, 0.8) 50%,
-      rgba(255, 255, 255, 0) 60%
+      rgba(255, 255, 255, 0.137) 40%,
+      rgba(255, 255, 255, 0.767) 50%,
+      rgba(255, 255, 255, 0.51) 80%
     );
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1017,7 +1015,7 @@ i:hover{
     inset: -10px;
     background: radial-gradient(
       circle at 50% 0%,
-      rgba(124, 58, 237, 0.3) 0%,
+      #17132460 0%,
       rgba(124, 58, 237, 0) 70%
     );
     opacity: 0;
@@ -1041,8 +1039,8 @@ i:hover{
     background: #10b981;
     color: white;
     padding: 0.25em 0.5em;
-    border-radius: 999px;
-    font-size: 1em;
+    border-radius: 12px;
+    font-size: 1.1em;
     font-weight: 600;
     transform: scale(0.8);
     opacity: 0;
@@ -1058,7 +1056,44 @@ i:hover{
     position: relative;
     overflow: hidden;
   }
+
+/*   pictures for each image */ 
+.card__image-1{
+    background: url(assets/centurion-device-1.webp);
+    background-size: cover;
+    background-position: center;
+  }
   
+  .card__image-2{
+    background: url(assets/wall-cam.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card__image-3{
+    background: url(assets/electric\ fence.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card__image-4{
+    background: url(assets/monitoring\ hotel\ reservations.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.card__image-5{
+    background: url(assets/lady-and-biometric-reader.webp);
+    background-size: cover;
+    background-position: center;
+  }
+.card__image-6{
+    background: url(assets/security-systems.webp);
+    background-size: cover;
+    background-position: center;
+  }
+
+
   .card__image::after {
     content: "";
     position: absolute;
@@ -1085,7 +1120,6 @@ i:hover{
   }
   
   .card__title {
-    color: var(--card-text);
     font-size: 1.5em;
     margin: 1em 0 0.5em 0;
     font-weight: 600;
@@ -1094,7 +1128,6 @@ i:hover{
   }
   
   .card__description {
-    color: var(--card-text);
     font-size: 1.4em;
     margin: 1em 0;
     opacity: 0.7;
@@ -1111,15 +1144,13 @@ i:hover{
   
   
   
-  /*Card Hover Effects */
-  .products:hover .card {
-    transform: translateY(-20px);
-    box-shadow:
-      0 20px 25px -5px rgba(0, 0, 0, 0.1),
-      0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    border-color: rgba(124, 58, 237, 0.2);
+  /*Card Hover Effects */  
+  .card:hover {
+    transform: translateY(-10px) scale(1);
+    box-shadow: 0 20px 30px rgba(250, 250, 250, 0.349);
+    border-color: var(--color-accent);
   }
-  
+
   .card:hover .card__shine {
     opacity: 1;
     animation: shine 3s infinite;
@@ -1149,8 +1180,9 @@ i:hover{
     opacity: 1;
     transform: translateX(2px);
   }
-.card:hover .card__button {
+.card:hover .contact-btn {
     transform: scale(1);
+
     transform: translateY(-2px);
     box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
   }
@@ -1188,9 +1220,12 @@ i:hover{
 
 /* Contact section styles start */
 #contact{
-  background: var();
+  background: url(assets/circle-1.svg) var(--neutral-light);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 75%;  
+  position: relative;
 }
-/* Contact section styles start */
 
 /* Contact Form Styles start */
 .contact-form{
@@ -1198,6 +1233,10 @@ i:hover{
   align-items: last baseline;
   gap: 4rem;
   padding-top: 4rem;
+
+  h3{
+    ;
+  }
     
 }
 
@@ -1212,6 +1251,7 @@ i:hover{
   border-radius: 10px;
   position: relative;
 }
+
 
 
 .more-contacts .inner{
@@ -1572,9 +1612,9 @@ aside .muted{
 .card__title,
 .card__description,
 .card__badge,
-.card__button {
+.card-btn {
   opacity: 0;
-  transform: translateY(6px);
+  transform: translateY(4px);
   transition: opacity 380ms ease, transform 380ms ease;
   will-change: opacity, transform;
 }

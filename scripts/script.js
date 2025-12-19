@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1 // trigger when 10% visible
+    threshold: 0.1 
   };
 
   const groupObserver = new IntersectionObserver((entries, observer) => {
@@ -17,22 +17,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const cards = Array.from(entry.target.querySelectorAll('.card'));
       cards.forEach((card, i) => {
-        const delay = i * 120; // 120ms stagger per card
+        const delay = i * 120; 
         setTimeout(() => {
           card.classList.add('card--visible');
 
-          // prefer .card__description, fall back to any <p> inside
           const para = card.querySelector('.card__description') || card.querySelector('p');
           if (para) {
-            // add visible class for the paragraph (keeps selector simple and explicit)
             para.classList.add('card__description--visible');
-            // also add fallback marker class if it's a generic p
             if (para.tagName.toLowerCase() === 'p') para.classList.add('card-para-visible');
           }
         }, delay);
       });
 
-      // we can unobserve the group once animated
       observer.unobserve(entry.target);
     });
   }, options);
@@ -40,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   groups.forEach(g => groupObserver.observe(g));
 });
 
-    // set dynamic copyright year
+    // set dynamic copyright year footer
     (function(){
       const el = document.getElementById('copy-year');
       if(el) el.textContent = new Date().getFullYear();
