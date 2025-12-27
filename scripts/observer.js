@@ -1,4 +1,74 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const productsContainer = document.querySelector('.point-wrapper');
+  const dotsContainer = document.querySelector('.dots-container');
+  const productCards = document.querySelectorAll('.point-wrapper .card');
+
+  if (!productsContainer || !dotsContainer || !productCards.length) {
+    return;
+  }
+
+  // Create dots
+  productCards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.classList.add('dot');
+    if (i === 0) {
+      dot.classList.add('active');
+    }
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  // Function to update dots based on scroll position
+  const updateDots = () => {
+    const scrollLeft = productsContainer.scrollLeft;
+    const cardWidth = productCards[0].offsetWidth;
+    const activeIndex = Math.round(scrollLeft / cardWidth);
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === activeIndex);
+    });
+  };
+
+  // Function to scroll to a specific card
+  const scrollToCard = (index) => {
+    const cardWidth = productCards[0].offsetWidth;
+    productsContainer.scrollTo({
+      left: cardWidth * index,
+      behavior: 'smooth'
+    });
+  };
+
+  // Add click handlers to dots
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      scrollToCard(i);
+    });
+  });
+
+  // Use an observer to only run this on mobile
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+  const handleDeviceChange = (e) => {
+    if (e.matches) {
+      // On mobile
+      dotsContainer.style.display = 'flex';
+      productsContainer.addEventListener('scroll', updateDots, { passive: true });
+      updateDots(); // Initial check
+    } else {
+      // On desktop
+      dotsContainer.style.display = 'none';
+      productsContainer.removeEventListener('scroll', updateDots);
+    }
+  };
+
+  mediaQuery.addEventListener('change', handleDeviceChange);
+  handleDeviceChange(mediaQuery); // Initial check
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.observe-section');
   if (!sections.length) return;
 

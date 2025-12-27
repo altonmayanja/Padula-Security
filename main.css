@@ -46,7 +46,7 @@ html {
   /* primary */
   --color-secondary: #1C1F26;
   /* secondary */
-  --color-accent: #2f5e8c;
+  --color-accent: #4A90E2;
   /* accent */
   --neutral-light: #D1D5DB;
   /* light neutral */
@@ -473,21 +473,23 @@ h4 {
 
 p {
   font-size: clamp(1rem, calc(4vw + 1rem), 1.2rem);
-  color: var(--txt-color);
 }
 
 /* Header styles start */
 
-#header{
-  @media screen and (max-width:583px) {
-    background: url(assets/camera-2.webp), no-repeat;
-    background-size: calc(100% + 20rem);
+@media screen and (max-width: 583px) {
+  #header {
+    background-image: url("assets/camera-2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    align-items: center; 
-   
-  .inner-text{
+    align-items: center;
+  }
+
+  #header .inner-text {
     width: 100%;
     height: 300px;
     text-align: center;
@@ -496,19 +498,17 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.222);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    border-radius: 0.7rem;
+    border-radius: 2rem;
   }
 
-  h2{
+  #header h2 {
     color: var(--color-secondary);
     font-weight: 500;
   }
 
-  .blob-img{
+  #header .blob-img {
     width: 0;
   }
-  }
-  
 }
 
 #header, .header {
@@ -1095,6 +1095,28 @@ i:hover {
 .point-wrapper::-webkit-scrollbar-thumb {
   background-color: var(--secondary-colors);
   border-radius: 50px;
+}
+
+.dots-container {
+  display: none;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--neutral-light);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: var(--color-accent);
 }
 
 /* Cards styles Start */
