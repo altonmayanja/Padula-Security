@@ -1056,7 +1056,11 @@ i:hover {
 
   .text{
     padding: min(1rem, 10%);;
-    line-height: 2;
+    
+
+    h3{
+      margin: 2rem;
+    }
   }
 }
 
